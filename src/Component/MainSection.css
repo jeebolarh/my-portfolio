@@ -1,0 +1,16 @@
+.intro-text{
+    color: #fff;
+}
+.mainsection-container{
+    width: 97.5%;
+    margin: auto;
+    margin-top: 6rem;
+}
+.frontend-header{
+    margin-top: -1rem;
+    color: lightblue;
+    letter-spacing: 0.2rem;
+    width: 600px;
+    height: 300px;
+    background-color: black;
+}

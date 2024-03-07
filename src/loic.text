@@ -1,0 +1,56 @@
+import React, { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
+
+// Function to generate a random sliding direction (top, left, right, bottom)
+const getRandomSlideDirection = () => {
+ const directions = ['top', 'left', 'right', 'bottom'];
+ return directions[Math.floor(Math.random() * directions.length)];
+};
+
+// Custom hook to create a random animation for a link
+const useRandomAnimation = () => {
+ const direction = getRandomSlideDirection();
+ return useSpring({
+   from: { opacity: 0, transform: `translate(${direction === 'top' || direction === 'bottom' ? '0' : '100%'}, ${direction})` },
+   to: { opacity: 1, transform: 'translate(0, 0)' },
+   config: { duration: 500 }, // Adjust animation duration as needed
+ });
+};
+
+// Custom hook to generate an array of animations for links
+const useLinkAnimations = (count) => {
+ return Array.from({ length: count }, useRandomAnimation);
+};
+
+const Navbar = () => {
+ const navLinks = [
+   { text: 'Logo', path: '/' }, // Assuming Logo links to the homepage
+   { text: 'Home', path: '/' },
+   { text: 'About', path: '/about' },
+   { text: 'Resume', path: '/resume' },
+   { text: 'Contact', path: '/contact' },
+ ];
+
+ const [linkAnimations, setLinkAnimations] = useState([]);
+
+ useEffect(() => {
+   const anims = useLinkAnimations(navLinks.length);
+   setLinkAnimations(anims);
+ }, []); // Run only once on component mount
+
+ return (
+   <nav>
+     {navLinks.map((link, index) => (
+       <animated.a
+         key={link.text}
+         href={link.path}
+         style={linkAnimations[index]}
+       >
+         {link.text}
+       </animated.a>
+     ))}
+   </nav>
+ );
+};
+
+export default Navbar;

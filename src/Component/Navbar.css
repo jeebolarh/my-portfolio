@@ -1,0 +1,22 @@
+.links{
+    margin: 1rem;
+    margin-top: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.links:hover{
+    color: rgb(199, 246, 255);
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    color: rgb(182, 237, 255);
+    margin-left: 1rem;
+}
+.links-container{
+    margin-top: 1.75rem;
+}
