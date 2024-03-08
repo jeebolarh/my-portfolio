@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Component/Navbar';
 import './Component/App.css'
 import MainSection from './Component/MainSection';
-
+import image from './Component/ME.png'
 function App() {
   const links = [
     { text: "Home", url: "/" },
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='container'>
       <Navbar links={links} />
-      <MainSection/>
+      <MainSection image={image } />
     </div>
   );
 }

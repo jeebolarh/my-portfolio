@@ -5,12 +5,98 @@
     width: 97.5%;
     margin: auto;
     margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .frontend-header{
-    margin-top: -1rem;
+    margin-top: 1rem;
     color: lightblue;
     letter-spacing: 0.2rem;
+
+}
+.text-container{
     width: 600px;
+        height: 300px;
+        padding: 1rem;
+        border-radius: 5px;
+}
+.description{
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+.button-container{
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+.button-container button{
+    padding: 7px;
+    width: 110px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.hire{
+    margin-right: 1rem;
+    background-color: lightblue;
+    color: rgba(13, 41, 75, 0.941);
+    border: 1px solid lightblue;
+}
+.talk{
+    background-color: transparent;
+    color: lightblue;
+    border: 1px solid lightblue;
+}
+.blob-container {
+    position: relative;
+    display: inline-block;
+}
+
+.blob-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    /* Adjust size as needed */
     height: 300px;
-    background-color: black;
+    /* Adjust size as needed */
+    background-color: #f0f0f0;
+    /* Adjust background color */
+    border-radius: 50%;
+    /* Creates a circular blob */
+    clip-path: polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%);
+    /* Modify this to create your desired blob shape */
+}
+
+.blob-container img {
+    position: relative;
+    z-index: 1;
+    /* Ensure the image stays on top */
+    width: 100%;
+    /* Adjust width as needed */
+    height: auto;
+}
+.image{
+    width: 300px;
+    background-color: lightblue;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+.socials{
+    color: lightblue;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 9rem;
+}
+.socials .f{
+    border: 2px solid lightblue;
+    border-radius: 50%;
+    width: 28px;
+    padding: 2px;
 }
